@@ -1,0 +1,52 @@
+"""
+Take two lists, say for example these two:
+
+  a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+  b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+and write a program that returns a list that contains only the elements that are common between the lists (without duplicates).
+Make sure your program works on two lists of different sizes.
+
+Extras:
+
+Randomly generate two lists to test this
+Write this in one line of Python (don’t worry if you can’t figure this out at this point - we’ll get to it soon)
+"""
+
+
+
+import random
+a = []
+b = []
+c = []
+
+for x in range(1,10):
+    y = random.randint(0,100)
+    w = random.randint(0,100)
+    a.append(y)
+    b.append(w)
+
+print(a)
+print(b)
+
+"""
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+"""
+
+
+for number1 in a:
+    for number2 in b:
+        if number1 == number2:
+            if number1 in c:
+                continue
+            else:
+                c.append(number1)
+
+
+print(c)
+
+"""
+Ik had al eerder gewerkt met de random module. Dus ik wist dat ik random integers kon aanmaken echter heb ik een paar minuten vastgezeten omdat ik
+randint(0,100) type zonder radom. ervoor... Ik dacht dat ik het mij goed herinnerde. Kennelijk niet. 
+Ik vond deze oefening ook erg leuk om te spelen met de dubbele for loop. Ik had hem redelijk snel klaar.
+"""
