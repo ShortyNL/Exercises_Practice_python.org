@@ -1,0 +1,18 @@
+"""Exercise 6 : Ask the user for a string and print out whether this string is a palindrome or not.
+(A palindrome is a string that reads the same forwards and backwards.)
+"""
+print("Dit programma is om te kijken of jou input een palindrome is.\n")
+str = input("Type hier een woord.\n")
+
+strbck = str[::-1]
+
+if str == strbck:
+    print("Je woord is een palindrome.")
+else:
+    print("Je woord is geen palindrome.")
+
+"""
+Deze opdracht heb ik wel even over gedaan. Ik heb lang zitten denken op welke manier ik de string kon omdraaien.
+Na wat speurwerk kwam ik erachter dat een string in Python net zo werkt als een list. Oftewel ook de indexen werken.
+Daarna was het redelijk eenvoudig om de oplossing te vinden.
+"""
