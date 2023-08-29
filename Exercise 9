@@ -1,0 +1,32 @@
+"""
+Generate a random number between 1 and 9 (including 1 and 9). Ask the user to guess the number, then tell them whether they guessed too low, too high, or exactly right. (Hint: remember to use the user input lessons from the very first exercise)
+
+Extras:
+
+a) Keep the game going until the user types “exit”
+b) Keep track of how many guesses the user has taken, and when the game ends, print this out.
+"""
+
+import random
+
+geheimnr = random.randint(1,9)
+aantal_geraden = 0
+raad = 0
+keuze = "Ja"
+
+while keuze != "nee":
+    raad = int(input("Type hier een getal.\n"))
+    aantal_geraden += 1
+    if raad > geheimnr:
+        print("Je moet lager raden.")
+    elif raad < geheimnr:
+        print("Je moet hoger raden.")
+    else:
+        print(f"Je hebt het geheime getal geraden. Dit was namelijk {geheimnr}")
+        print(f"Je hebt {aantal_geraden}x geraden.")
+        keuze = input("Wil je nogmaals spelen? (Ja of Nee)\n").lower()
+
+
+"""
+Ik had al een keer eerder een soort gelijk spel gemaakt dus deze ging vrij soepel.
+"""
