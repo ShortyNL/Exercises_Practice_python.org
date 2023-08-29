@@ -1,0 +1,32 @@
+"""Make a two-player Rock-Paper-Scissors game.
+(Hint: Ask for player plays (using input), compare them, print out a message of congratulations to the winner,
+and ask if the players want to start a new game)
+"""
+
+new_game = "ja"
+
+while new_game.lower() != "nee": #create an infinte loop.
+    input1 = input("Speler 1 - Type hier steen, papier of schaar.\n").lower()
+    input2 = input("Speler 2 - Type hier steen, papier of schaar.\n").lower()
+
+    if input1 in ["steen", "papier", "schaar"] and input2 in ["steen", "papier", "schaar"]:
+        if input1 != input2:
+            if input1 == "steen" and input2 == "papier":
+                print("Speler 2 wint!")
+            elif input1 == "papier" and input2 == "schaar":
+                print("Speler 2 wint!")
+            elif input1 == "schaar" and input2 == "steen":
+                print("Speler 2 wint!")
+            else:
+                print("Speler 1 wint!")
+        else:
+            print("Gelijkspel. Probeer opnieuw.")
+    else:
+        print("Geen geldige invoer. Probeer opnieuw.")
+    new_game = input("Wil je nog een keer spelen? (type Ja of Nee)\n")
+
+"""
+Ik had al een keer eerder een spelletje steen/papier/schaar gemaakt. Het blijft een leuke oefening. Ik zat wel even te klooien
+met de input te checken op steen, papier of schaar. Ik had eerst staan: if input1 and input2 == "steen" or "papier" or "schaar". 
+Echter dit werkte niet. 
+"""
