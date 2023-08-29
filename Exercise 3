@@ -1,0 +1,45 @@
+"""Take a list, say for example this one:
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+and write a program that prints out all the elements of the list that are less than 5.
+
+Extras:
+
+Instead of printing the elements one by one, make a new list that has all the elements less than 5 from this list in it and print out this new list.
+Write this in one line of Python.
+Ask the user for a number and return a list that contains only elements from the original list a that are smaller than that number given by the user."""
+
+
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+for numbers in a:
+    if numbers <5:
+        print(numbers)
+    else:
+        continue
+
+b = []
+for numbers in a:
+    if numbers <5:
+        b.append(numbers)
+    else:
+        continue
+print(b)
+
+num_user = int(input("Please put a number in here.\n"))
+b = []
+for numbers in a:
+    if numbers < num_user:
+        b.append(numbers)
+    else:
+        continue
+print(b)
+"""
+x = 1
+print( [ numbers for numbers in a if x<5 ] )
+
+De code in 1 lijn heb ik zelf niet gevonden. Ik heb uiteindelijk chatGPT gebruikt om deze code te maken. 
+De rest was een zeer vermakelijke oefening om te kijken hoe goed ik wist om te gaan met for loops.
+Ik heb mijn hoofd er wel even over zitten breken maar ben er uiteindelijk zelf uitgekomen.
+"""
