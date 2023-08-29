@@ -1,0 +1,43 @@
+"""The exercise comes first (with a few extras if you want the extra challenge or want to spend more time),
+followed by a discussion. Enjoy!
+
+Ask the user for a number. Depending on whether the number is even or odd, print out an appropriate message to the user.
+Hint: how does an even / odd number react differently when divided by 2?
+
+Extras:
+
+If the number is a multiple of 4, print out a different message.
+Ask the user for two numbers: one number to check (call it num) and one number to divide by (check). If check divides evenly into num,
+tell that to the user. If not, print a different appropriate message."""
+
+
+
+number = int(input("Please enter a number here.\n"))
+if (number % 4) == 0:
+    print(f"the {number} is dividable by 4.")
+if number % 2 == 0:
+    print(f"{number} is an even number.")
+else:
+    print(f"{number} is an odd number.")
+
+
+
+number = int(input("Please enter a number here.\n"))
+check = int(input("Please enter a second number here.\n"))
+
+if number % check == 0:
+    print(f"The number {number} is dividable by {check}.")
+    if number % 2 == 0:
+        print(f"{number} is an even number.")
+    else:
+        print(f"{number} is an odd number.")
+elif number % 2 == 0:
+    print(f"The number {number} is not divable by {check}")
+    print(f"{number} is an even number.")
+else:
+    print(f"The number {number} is not divable by {check}")
+    print(f"{number} is an odd number.")
+
+""" 
+Dit was wel een leuke opdracht omdat ik even tijd nodig had om uit te vinden hoe ik de even getallen moest checken.
+"""
